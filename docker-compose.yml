@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  nginx-default:
+    image: nginx:1.25-alpine
+    container_name: nginx_default
+    volumes:
+      - ./configs/nginx_default.conf:/etc/nginx/nginx.conf:ro
+      - ./static:/usr/share/nginx/html:ro
+    ports:
+      - "8080:80"
+    networks:
+      - bench-net
+
+  nginx-optimized:
+    image: nginx:1.25-alpine
+    container_name: nginx_optimized
+    volumes:
+      - ./configs/nginx_optimized.conf:/etc/nginx/nginx.conf:ro
+      - ./static:/usr/share/nginx/html:ro
+    ports:
+      - "8081:80"
+    networks:
+      - bench-net
+
+networks:
+  bench-net:
+    driver: bridge
