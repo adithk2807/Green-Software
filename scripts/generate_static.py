@@ -30,7 +30,7 @@ incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostru
 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </body></html>""")
 
-print("✅ Static files generated successfully!")
+print(" Static files generated successfully!")
 print(f"  medium.json  → {os.path.getsize('static/medium.json')} bytes")
 print(f"  large.bin    → {os.path.getsize('static/large.bin')} bytes")
 print(f"  small.html   → {os.path.getsize('static/small.html')} bytes")
