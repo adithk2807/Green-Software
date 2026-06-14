@@ -149,5 +149,5 @@ plt.savefig(out, dpi=150)
 plt.close()
 print(f"Saved: {out}")
 
-print("\n✅ All 5 charts saved to results/")
+print("\n All 5 charts saved to results/")
 print("Open the results/ folder in VS Code Explorer to view them!")
